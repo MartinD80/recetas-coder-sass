@@ -1,0 +1,369 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    }
+
+
+    body{
+        font-family: tuppence,serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #035AA6;
+        color: #BADAEA;
+    }
+    
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,auto);
+        grid-template-areas: "nav nav nav nav"
+                            "banner banner banner banner"
+                            "recetas-buscadas recetas-buscadas recetas-buscadas recetas-buscadas"
+                            "sugerencia sugerencia sugerencia sugerencia"
+                            "footer footer footer footer";
+    }
+
+    nav{
+        grid-area: nav;
+        background-color:#035AA6;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .banner{
+        grid-area: banner;
+        display: flex;
+        justify-content: center;
+    }
+    .recetas-buscadas{
+        grid-area: recetas-buscadas;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sugerencia{
+        grid-area: sugerencia;
+        background-color:#035AA6;    
+    }
+    
+    .footer{
+        grid-area: footer;
+        background-color:#035AA6;    
+    }
+
+    .nav-list{
+        list-style-type: none;
+        
+    }
+
+    .nav-list .list-item{
+        display: inline-block;
+        padding: 20px 10px;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none;
+    }
+    .navbar a:hover{
+        color: #BADAEA;
+    }
+    .icono{
+        height: 45px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-line{
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 4px;
+    }
+    li.active a{
+        text-decoration: underline;
+        font-family: tuppence,serif;
+        font-weight: 700;
+        font-size: larger;
+        font-style: italic;
+        color: white;
+    }
+    
+
+    /* Grid main */
+
+    .title1 {
+        grid-area: title;
+        padding: 55px;
+    }
+    .title1 h2{
+        color: white;
+    }
+    
+    .receta1 {
+        grid-area: receta1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .receta2 {
+        grid-area: receta2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .receta3 {
+        grid-area: receta3;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .receta4 {
+        grid-area: receta4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .receta5 {
+        grid-area: receta5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .receta6 {
+        grid-area: receta6;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .recetas {
+        background-color: white;
+        color: rgb(27, 26, 26);
+        height: 200px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .unodos {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .receta1{
+        position: relative;
+    }
+    .receta1:hover .efecto{
+        opacity: 1;
+    }
+
+    .unodos a{
+        text-decoration: none;
+    }
+
+    .efecto{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, 0.700);
+        display: flex;
+       
+    }
+
+    .ver{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left:50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .bondiola{
+        float: left;
+        shape-outside: circle(50%);
+        border-radius: 50%;
+        width: 225px;
+         height: 225px;
+         margin: 15px;
+    }
+
+    .texto-sugerencia{
+            font-size: larger; 
+            margin: -25px;
+    }
+
+    .sugerencia {
+        padding: 50px;
+    }
+    .title2{
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .title2 h3{
+        color: #BADAEA;
+    }
+
+  
+  /* Footer */
+
+  .footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-evenly;
+    padding: 10px;
+    padding-bottom: 25px;
+    border-top: solid 1px #BADAEA;
+    color: white;
+    flex-wrap: wrap;
+  }
+
+    .menu-footer {
+        list-style-type: none;
+    }
+
+    .nav-footer {
+        padding-top: 20px;
+    }
+    .nav-footer a{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .contacto {
+        padding-top: 20px;
+    }
+
+    .redes {
+        padding-top: 20px;
+    }
+
+    .logo {
+        padding-top: 20px;
+    }
+
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+    }
+    .redes-sociales a{
+        text-decoration: none;
+    }
+
+    .red {
+        padding-left: 10px;
+    }
+    .red a{
+        color: white;
+    }
+
+    .title-footer {
+        padding-bottom: 20px;
+        font-size: large;
+    }
+    .menu-footer a{
+        color: white;
+    }
+
+
+    /* Footer */
+
+
+
+    @media screen and (max-width:600px){
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5,auto);
+            grid-template-areas:    "nav"
+                                    "banner"
+                                    "recetas-buscadas"
+                                    "sugerencia"
+                                    "footer";
+        }
+
+        .unodos {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    @media all and (max-width: 500px) {
+        
+        .navbar{
+            flex-direction: column;
+        }
+        .menu{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .nav-list .list-item{
+            display: block;
+            padding: 5px;
+            border-top: 1px solid white;
+        }
+        .nav-list{
+            width: 100%;
+            text-align: center;
+            padding-top: 5px;
+            display: none;
+        }
+        .div-nav{
+            width: 95%;
+            margin-left: 10px;
+        }
+        .active{
+            display: block;
+        }
+
+        @media all and (max-width: 400px) {
+            .title1 h2{
+                text-align: center;
+            }
+
+            .title2 h2{
+                text-align: center;
+            }
+            .title2 h3{
+                text-align: center;
+            }
+            .texto-sugerencia{
+                text-align: center;
+            }
+        }
+    }
