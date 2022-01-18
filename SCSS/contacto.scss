@@ -1,0 +1,195 @@
+@import "./reset";
+@import "./variables";
+
+@mixin paddingTop {
+    padding-top: 20px;
+}
+
+body {
+    background-color: $color-primario;
+    font-weight: map-get($tamaño-fuente,regular);
+    color: $color-texto;
+    font-family: $family-fuente;
+}
+
+nav{
+    background-color: $color-primario;
+    color: $color-texto2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav-list{
+        list-style-type: none;
+    }
+
+    .list-item{
+        display: inline-block;
+       padding: 20px 10px;
+    }
+    
+    a{
+        color: $color-texto2;
+        text-decoration: none;
+    }
+    a:hover{
+        color: $color-texto;
+    }
+    .icono{
+        height: 45px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-line{
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 4px;
+    }
+    li.active a{
+        text-decoration: underline;
+        font-family: $family-fuente;
+        font-weight: map-get($tamaño-fuente,regular);
+        font-size: larger;
+        font-style: italic;
+        color: $color-texto2;
+    }
+
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.formulario {
+    border-radius: 5px;
+    background-color: #035AA6;
+    padding: 50px;
+
+    form{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+    }
+    
+    input[type=email] {
+        width: 100%;
+        color: $color-texto2;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: grey;
+    }
+    
+    }
+
+    
+    .footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-evenly;
+    padding: 10px;
+    padding-bottom: 25px;
+    border-top: solid 1px #BADAEA;
+    color: $color-texto2;
+    flex-wrap: wrap;
+
+    .menu-footer {
+        @extend .nav-list;
+    }
+  
+    .nav-footer {
+        @include paddingTop();
+    }
+    .nav-footer a{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    .contacto {
+        @include paddingTop();
+    }
+  
+    .redes {
+        @include paddingTop();
+    }
+  
+    .logo {
+        @include paddingTop();
+    }
+  
+    .redes-sociales {
+        display: flex;
+        flex-direction: column;
+    }
+    .redes-sociales a{
+        text-decoration: none;
+    }
+  
+    .red {
+        padding-left: 10px;
+    }
+    .red a{
+        color: $color-texto2;
+    }
+  
+    .title-footer {
+        padding-bottom: 20px;
+        font-size: large;
+    }
+    .menu-footer a{
+        color: $color-texto2;
+    }
+  
+  }
+
+  @media all and (max-width: 500px) {
+        
+    .navbar{
+        flex-direction: column;
+
+        .menu{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .list-item{
+            display: block;
+            padding: 5px;
+            border-top: 1px solid white;
+        }
+        .nav-list{
+            width: 100%;
+            text-align: center;
+            padding-top: 5px;
+            display: none;
+        }
+        .div-nav{
+            width: 95%;
+            margin-left: 10px;
+        }
+        .active{
+            display: block;
+        }
+    }
+    
+}

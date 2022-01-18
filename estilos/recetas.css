@@ -1,0 +1,205 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    }
+
+
+    body{
+        font-family: tuppence,serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #035AA6;
+        color: #BADAEA;
+    }
+
+    /* Nav */
+    
+    
+
+    nav{
+        background-color:#035AA6;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-list{
+        list-style-type: none;
+    }
+
+    .nav-list .list-item{
+        display: inline-block;
+       padding: 20px 10px;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none;
+    }
+    .navbar a:hover{
+        color: #BADAEA;
+    }
+    .icono{
+        height: 45px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-line{
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 4px;
+    }
+    li.active a{
+        text-decoration: underline;
+        font-family: tuppence,serif;
+        font-weight: 700;
+        font-size: larger;
+        font-style: italic;
+        color: white;
+    }
+
+    /* Nav */
+
+    .titulo{
+        text-align: center;
+        padding-top: 50px;
+    }
+
+
+    /* album de fotos */
+
+    .album-recetas{
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 50px 50px 70px 50px;
+        margin: 30px;
+    }
+    
+    .imagen{
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        min-width: 200px;
+    }
+    
+    /* album de fotos */
+    
+    /* tarjetas */
+
+    .tarjeta{
+        background-color: white;
+        box-shadow: 1px 1px 80px 1px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        color: black;
+    }
+    .text-rec{
+        text-align: center;
+        padding: 15px;
+        padding-bottom: 20px;
+    }
+
+    /* tarjetas */
+
+     /* Footer */
+
+     .footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content:space-evenly;
+        padding: 10px;
+        padding-bottom: 25px;
+        border-top: solid 1px #BADAEA;
+        color: white;
+        flex-wrap: wrap;
+      }
+
+  .menu-footer {
+      list-style-type: none;
+  }
+
+  .nav-footer {
+      padding-top: 20px;
+  }
+  .nav-footer a{
+      text-decoration: none;
+      list-style-type: none;
+  }
+  .contacto {
+      padding-top: 20px;
+  }
+
+  .redes {
+      padding-top: 20px;
+  }
+
+  .logo {
+      padding-top: 20px;
+  }
+
+  .redes-sociales {
+      display: flex;
+      flex-direction: column;
+  }
+  .redes-sociales a{
+      text-decoration: none;
+  }
+
+  .red {
+      padding-left: 10px;
+  }
+  .red a{
+      color: white;
+  }
+
+  .title-footer {
+      padding-bottom: 20px;
+      font-size: large;
+  }
+  .menu-footer a{
+      color: white;
+  }
+
+
+  /* Footer */
+
+   
+     @media all and (max-width: 500px) {
+        
+        .navbar{
+            flex-direction: column;
+        }
+        .menu{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .nav-list .list-item{
+            display: block;
+            padding: 5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.212);
+        }
+        .nav-list{
+            width: 100%;
+            text-align: center;
+            padding-top: 5px;
+            display: none;
+        }
+        .div-nav{
+            width: 95%;
+            margin-left: 10px;
+        }
+        .active{
+            display: block;
+        }
+
+    }
+
+    
